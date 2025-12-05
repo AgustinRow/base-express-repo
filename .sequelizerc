@@ -1,0 +1,17 @@
+// Need to review this to see if it works properly
+const path = require('path');
+
+let configPath;
+
+if (process.env.ENVIRONMENT !== 'local') {
+  configPath = path.join(__dirname, 'dist', 'web_api', '3rd_party', 'sequelize', 'config.js');
+} else {
+  configPath = path.join(__dirname, 'src', 'web_api', '3rd_party', 'sequelize', 'config.js');
+}
+
+module.exports = {
+  config: configPath,
+  'models-path': path.join(__dirname, 'src', 'service_providers', 'sequelize', 'models'),
+  'migrations-path': path.join(__dirname, 'src', '_migrations'),
+  'seeders-path': path.join(__dirname, 'src', 'database', '_seeders'),
+};

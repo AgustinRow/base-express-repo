@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    "module": "nodenext",
+    "target": "ES2022",
+    "moduleResolution": "NodeNext",
+    "lib": ["dom", "es2022"],
+    "baseUrl": "./",
+    "outDir": "./dist",
+    "rootDirs": ["./src", "src/libs"],    
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true,
+    "noImplicitThis": true,
+    "useUnknownInCatchVariables": true,
+    "noUnusedLocals": true,
+    "noImplicitReturns": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    "isolatedModules": true
+    },
+  
+  "include": ["src/**/*", "src/libs/**/*"],
+  "exclude": ["node_modules", "dist", "./src/_migrator/*.js"],
+  
+  "ts-node": {
+    "transpileOnly": true,
+    "files": true,
+    "module": "node",
+    
+  }
+}
